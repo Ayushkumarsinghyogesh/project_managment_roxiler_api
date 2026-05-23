@@ -8,7 +8,7 @@ gem "sqlite3", "~> 1.4"
 gem "puma", "~> 6.0"
 
 # JWT Authentication
-gem "jwt", "~> 2.7"
+gem "jwt", "~> 3.2"
 gem "bcrypt", "~> 3.1"
 
 # Serialization
