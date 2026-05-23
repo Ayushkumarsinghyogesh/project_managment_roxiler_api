@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.2.9"
 
 gem "rails", "~> 7.1.0"
-gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 2.9"
 gem "puma", "~> 6.0"
 
 # JWT Authentication
