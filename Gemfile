@@ -12,7 +12,7 @@ gem "jwt", "~> 2.7"
 gem "bcrypt", "~> 3.1"
 
 # Serialization
-gem "blueprinter", "~> 0.30"
+gem "blueprinter", "~> 1.3"
 
 # Pagination
 gem "kaminari", "~> 1.2"
