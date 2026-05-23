@@ -251,11 +251,14 @@ GEM
       rspec-support (~> 3.13)
     rspec-support (3.13.7)
     securerandom (0.4.1)
-    sqlite3 (1.7.3-aarch64-linux)
-    sqlite3 (1.7.3-arm-linux)
-    sqlite3 (1.7.3-arm64-darwin)
-    sqlite3 (1.7.3-x86_64-darwin)
-    sqlite3 (1.7.3-x86_64-linux)
+    sqlite3 (2.9.4-aarch64-linux-gnu)
+    sqlite3 (2.9.4-aarch64-linux-musl)
+    sqlite3 (2.9.4-arm-linux-gnu)
+    sqlite3 (2.9.4-arm-linux-musl)
+    sqlite3 (2.9.4-arm64-darwin)
+    sqlite3 (2.9.4-x86_64-darwin)
+    sqlite3 (2.9.4-x86_64-linux-gnu)
+    sqlite3 (2.9.4-x86_64-linux-musl)
     stringio (3.2.0)
     thor (1.5.0)
     timeout (0.6.1)
@@ -293,7 +296,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 7.1.0)
   rspec-rails (~> 6.0)
-  sqlite3 (~> 1.4)
+  sqlite3 (~> 2.9)
 
 RUBY VERSION
    ruby 3.2.9p265
