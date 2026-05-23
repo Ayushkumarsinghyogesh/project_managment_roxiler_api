@@ -25,7 +25,7 @@ gem "rack-cors"
 
 group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
-  gem "rspec-rails", "~> 6.0"
+  gem "rspec-rails", "~> 7.1"
   gem "factory_bot_rails"
   gem "faker"
 end
