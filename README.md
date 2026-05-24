@@ -23,8 +23,8 @@ A production-ready **Rails 7.1 API-only** application with JWT authentication, r
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-username/project-management-api.git
-cd project-management-api
+git clone https://github.com/Ayushkumarsinghyogesh/project_managment_roxiler_api.git
+cd project_management_api
 
 # 2. Install gems
 bundle install
@@ -205,77 +205,6 @@ Content-Type: application/json
 ```json
 { "error": "Missing Authorization header." }
 ```
-
----
-
-## ⚡ N+1 Query Prevention
-
-All list endpoints use eager loading via the `with_full_details` scope.  
-Fetching 100 projects with tasks and assignees fires **exactly 4 queries total**.
-
-```ruby
-# Project model
-scope :with_full_details, -> {
-  includes(:manager, tasks: :assignee)
-}
-
-# Result: 4 queries regardless of record count
-# 1. SELECT projects
-# 2. SELECT users WHERE id IN (manager_ids)
-# 3. SELECT tasks WHERE project_id IN (...)
-# 4. SELECT users WHERE id IN (assignee_ids)
-```
-
----
-
-## 🗃️ Project Structure
-
-```
-project_management_api/
-├── app/
-│   ├── controllers/
-│   │   ├── application_controller.rb     # JWT auth + error handling
-│   │   └── api/v1/
-│   │       ├── auth_controller.rb        # register, login, me
-│   │       ├── projects_controller.rb
-│   │       └── tasks_controller.rb
-│   ├── models/
-│   │   ├── user.rb
-│   │   ├── project.rb                    # scopes, with_full_details
-│   │   └── task.rb                       # filter + sort scopes
-│   ├── policies/                         # Pundit RBAC
-│   │   ├── application_policy.rb
-│   │   ├── project_policy.rb
-│   │   └── task_policy.rb
-│   ├── serializers/                      # Blueprinter views
-│   │   ├── user_blueprint.rb
-│   │   ├── project_blueprint.rb
-│   │   └── task_blueprint.rb
-│   └── services/
-│       └── jwt_service.rb                # encode / decode JWT
-├── config/
-│   ├── routes.rb
-│   └── initializers/
-│       ├── cors.rb
-│       └── kaminari.rb
-├── db/
-│   ├── migrate/                          # 3 migrations
-│   └── seeds.rb
-└── README.md
-```
-
----
-
-## 📝 Assumptions
-
-1. **Roles set at registration** — in production, only admins should assign manager/admin roles.
-2. **Managers can only create tasks in their own projects** — enforced via Pundit `TaskPolicy`.
-3. **Employees** can view task details and parent project info but cannot modify anything.
-4. **Duplicate task titles** are blocked per project — enforced at model validation + DB unique index.
-5. **JWT tokens expire in 24 hours** — configurable via `JwtService::EXPIRY`.
-6. **SQLite3** used for development. Swap to PostgreSQL by updating `config/database.yml`.
-7. **Shallow nested routes** available: `POST /api/v1/projects/:project_id/tasks` alongside flat routes.
-
 ---
 
 ## 🧪 Testing with Postman
@@ -288,7 +217,7 @@ A complete Postman collection (`project_management_api_postman.json`) is include
 - ✅ Authorization boundary tests (403, 401, 422)
 
 **Import steps:**
-1. Open Postman → **Import** → select `project_management_api_postman.json`
+1. Open Postman → **Import** → select **project_management_api_postman.json** downloaded via my repo project_management_api_postman.json firs`
 2. Create an environment with variable `base_url` = `http://localhost:3009`
 3. Run **Login - Admin** first → token auto-saves
 4. Run remaining requests in order
