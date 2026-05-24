@@ -55,7 +55,10 @@ The seed script creates **7 users**, **3 projects**, and **12 tasks** automatica
 
 ---
 
-## 🔐 Authentication
+## 🔐 Authentication And Postman TESTED results
+<img width="1413" height="930" alt="image" src="https://github.com/user-attachments/assets/440865fe-c0a4-4f9c-82ff-078842083482" />
+
+<img width="1466" height="938" alt="image" src="https://github.com/user-attachments/assets/257dd80f-278f-4168-9f43-8b7c1c027fa5" />
 
 Every request (except login and register) requires a **Bearer token** in the `Authorization` header.
 
@@ -156,10 +159,6 @@ Authorization: Bearer <token>
 ```
 
 ---
-<img width="1413" height="930" alt="image" src="https://github.com/user-attachments/assets/440865fe-c0a4-4f9c-82ff-078842083482" />
-
-
-
 ## 📋 Sample Requests
 
 ### Create a Task (Manager only)
@@ -226,9 +225,3 @@ A complete Postman collection (`project_management_api_postman.json`) is include
 4. Run remaining requests in order
 
 ---
-
-<img width="1466" height="938" alt="image" src="https://github.com/user-attachments/assets/257dd80f-278f-4168-9f43-8b7c1c027fa5" />
-
-## 📄 License
-
-MIT License — free to use and modify.
