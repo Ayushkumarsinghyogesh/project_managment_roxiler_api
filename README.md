@@ -24,7 +24,7 @@ A production-ready **Rails 7.1 API-only** application with JWT authentication, r
 ```bash
 # 1. Clone the repo
 git clone https://github.com/Ayushkumarsinghyogesh/project_managment_roxiler_api.git
-cd project_management_api
+cd project_management_api_roxiler
 
 # 2. Install gems
 bundle install
@@ -156,6 +156,9 @@ Authorization: Bearer <token>
 ```
 
 ---
+<img width="1413" height="930" alt="image" src="https://github.com/user-attachments/assets/440865fe-c0a4-4f9c-82ff-078842083482" />
+
+
 
 ## 📋 Sample Requests
 
@@ -223,6 +226,8 @@ A complete Postman collection (`project_management_api_postman.json`) is include
 4. Run remaining requests in order
 
 ---
+
+<img width="1466" height="938" alt="image" src="https://github.com/user-attachments/assets/257dd80f-278f-4168-9f43-8b7c1c027fa5" />
 
 ## 📄 License
 
